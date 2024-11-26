@@ -1,0 +1,72 @@
+reseau = {
+    101: {"nom": "capteur de temperature", "etat": "inactif"},
+    102: {"nom": "capteur d'humidite", "etat": "actif"},
+    103: {"nom": "capteur de pression", "etat": "inactif"}
+}
+
+def ajouter_peripherique(id,nom,etat,reseau):
+            #id = input("Saisir l'id: ")
+            #nom = input("Saisir la valeur: ")
+
+        
+        if id in reseau:
+            print("Existe déja")
+        else:
+            reseau[id]={"nom":nom,"etat":etat}
+            reseau[id]=nom
+            print("le peripherique a bien etait ajoute")
+        
+
+ajouter_peripherique(104,"capteur luminosite","actif",reseau)
+
+
+
+
+def supprimer_peripherique(id,reseau):
+    id = input("Veuillez saisir l'id du peripherique à supprimer: ")
+    del reseau [id]
+    print(f"le peripherique a etait supprimer ")
+    if id not in reseau:
+        print(f"l'{id}nexiste pas ")
+
+
+
+
+
+def modifier_etat(id,etat,reseau):
+    if reseau:
+
+        while True:
+            id = input("Veuillez saisir le peripherique à modifier: ")
+            if id not in reseau:
+                print(f"Le peripherique {id} n'a pas été trouvé dans le dictionnaire")
+            else:
+                etat = input("Veuillez saisir le nouvelle etat: ")
+                reseau[id]= etat
+                if etat== "inactif":
+                    etat=="actif"
+                elif etat =="inactif":
+                    print(f"L'etat a bien etait modifier")
+                
+                
+
+                
+    
+
+def afficher_peripherique_actif(reseau):
+    peripherique_actif= []
+
+
+
+
+
+
+    
+
+    
+#ajouter_peripherique()
+#supprimer_peripherique()
+#modifier_etat()
+#afficher_peripherique_actif()
+        
+
